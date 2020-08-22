@@ -126,15 +126,15 @@ constexpr double pow(double base, int exponent) {
 
 // Constexpr Objects
 
-class Date {
+class date {
 public:
-    constexpr Date(int day, int month, int year)
+    constexpr date(int day, int month, int year)
     : d(day), m(month), y(year) {
         self_balance();
     }
 
-    [[nodiscard]] constexpr Date offset(int days) const {
-        return Date(d + days, m, y);
+    [[nodiscard]] constexpr date offset(int days) const {
+        return date(d + days, m, y);
     }
 
     [[nodiscard]] constexpr unsigned short get_day() const { return d; }
@@ -214,9 +214,9 @@ int main() {
     static_assert(factorial(3) == 6, "");
     static_assert(factorial(2) == 2, "");
 
-    constexpr Date d(23, 8, 2020);
-    constexpr Date d2 = d.offset(365);
-    constexpr Date d3 = d.offset(-365);
+    constexpr date d(23, 8, 2020);
+    constexpr date d2 = d.offset(365);
+    constexpr date d3 = d.offset(-365);
     std::cout << d2.get_day() << " / " << d2.get_month() << " / " << d2.get_year() << std::endl;
     std::cout << d3.get_day() << " / " << d3.get_month() << " / " << d3.get_year() << std::endl;
 
