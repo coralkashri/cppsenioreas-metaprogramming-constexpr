@@ -1,1 +1,1 @@
-This is examples repository of [C++ Senioreas](https://cppsenioreas.wordpress.com/) blog metaprogramming constexpr article [soon].
+This is examples repository of [C++ Senioreas](https://cppsenioreas.wordpress.com/) blog [metaprogramming constexpr](https://cppsenioreas.wordpress.com/2020/08/23/become-a-compile-time-coder/) article.
